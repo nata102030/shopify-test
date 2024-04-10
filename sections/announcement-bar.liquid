@@ -40,10 +40,11 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
+          
           <p class="announcement-bar__message h5">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank -%}
-              {% render 'icon-arrow' %}
+              {% render 'icon-arrow' %} 
             {%- endif -%}
           </p>
           {%- if section.blocks.first.settings.link != blank -%}
@@ -103,8 +104,9 @@
                       <span>{{ block.settings.text | escape }}</span>
                       {%- if block.settings.link != blank -%}
                         {% render 'icon-arrow' %}
-                      {%- endif -%}
+                      {%- endif -%} 
                     </p>
+                     <p class="custom-text">{{ block.settings.customText }}</p>
                     {%- if block.settings.link != blank -%}
                       </a>
                     {%- endif -%}
@@ -303,6 +305,12 @@
           "id": "text",
           "default": "Welcome to our store",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+         {
+          "type": "text",
+          "id": "customText",
+          "default": "Hi, Shopify",
+          "label": "Custom text"
         },
         {
           "type": "url",
