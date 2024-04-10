@@ -9,6 +9,7 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
+            "customText": "Hi, Shopify1",
             "link": ""
           }
         }
